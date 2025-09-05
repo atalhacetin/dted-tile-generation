@@ -14,7 +14,7 @@ Utilities to build a multi-level set of elevation tiles (BIL/ENVI) from SRTMGL3 
 
 ## Workflow Overview
 
-1. Download SRTMGL3 (v003) 1 arc-second zip files into `SRTMGL3_003/` (already present in this repo structure placeholder).
+1. Download SRTMGL3 (v003) 3 arc-second zip files into `SRTMGL3_003/` (already present in this repo structure placeholder).
 2. Extract all archives into `SRTMGL3_003_unzipped/`.
 3. Build a global virtual raster `global_dem.vrt` from the extracted `.hgt` files.
 4. Run tile generation for desired levels (default 0–4) producing `../elevation_tiles/<level>/<row>/<row>_<col>.bil`.
