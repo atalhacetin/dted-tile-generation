@@ -128,29 +128,7 @@ pip install numpy matplotlib
 ```
 `numpy` is used implicitly by the comparison script; `matplotlib` only for visualization.
 
-## Troubleshooting
-
-| Issue | Cause | Fix |
-|-------|-------|-----|
-| `gdalbuildvrt` not recognized | GDAL not installed / PATH missing | Install GDAL; verify `gdalinfo --version` |
-| Empty (all zero) ocean tiles | SRTM has void / no sea floor | Expected; handle NoData=0 |
-| Size mismatch in compare script | One tile not 512×512 or wrong file | Confirm both paths & tile dimensions |
-| Misaligned differences | Row inversion or level mismatch | Verify level/row/col and path patterns |
-| Slow generation | Many tiles & resampling | Limit `--end` level temporarily |
-
 ## Notes
 - Output directory is outside repo root (`../elevation_tiles`). Adjust `OUTPUT_DIR` if you prefer an in-repo folder.
 - Consider compressing intermediate `temp_tile.tif` creation if disk I/O becomes a bottleneck (e.g., add `-co COMPRESS=DEFLATE`).
 - You may post-process to generate overviews or convert to Cloud Optimized GeoTIFF depending on downstream consumers.
-
-## Next Enhancements (Ideas)
-- Add `requirements.txt` for Python dependencies
-- Add progress bar and concurrency
-- Add CLI option to skip existing tiles
-- Add automated validation stats (RMSE, mean bias)
-
-## License
-Specify license terms here.
-
----
-Generated documentation.
