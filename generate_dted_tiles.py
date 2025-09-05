@@ -6,7 +6,6 @@ import argparse
 # --- Configuration ---
 SOURCE_DEM = "global_dem.vrt" 
 OUTPUT_DIR = "../elevation_tiles"
-NUM_LEVELS = 5
 TOP_LEVEL_DELTA = 60.0
 TILE_WIDTH = 512
 TILE_HEIGHT = 512
